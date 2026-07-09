@@ -104,38 +104,6 @@ FilaPe-Acceptance-Tests
 
 ---
 
-## ✅ Estructura de las pruebas
-
-Cada archivo `.feature` incluye:
-
-- **Feature:** nombre de la historia de usuario evaluada.
-- **Background:** contexto común para los escenarios.
-- **Scenario:** escenario de aceptación.
-- **Given:** condiciones iniciales.
-- **When:** acción del usuario o evento del sistema.
-- **Then:** resultado esperado.
-- **Data tables:** datos de prueba organizados en tablas cuando corresponde.
-
-Ejemplo:
-
-```gherkin
-Feature: Generación de ticket virtual
-
-  Background:
-    Given que el ciudadano ha iniciado sesión en FilaPe
-    And se encuentra en el módulo de solicitud de turno
-
-  Scenario: Generación exitosa de ticket virtual
-    Given que el ciudadano seleccionó los siguientes datos para su atención:
-      | entidad | sede             | tramite        |
-      | RENIEC  | Sede Lima Centro | Renovación DNI |
-    When selecciona la opción "Generar ticket virtual"
-    Then el sistema crea un ticket virtual asociado al ciudadano
-    And muestra el mensaje "Ticket virtual generado correctamente"
-```
-
----
-
 ## 🔄 Tipos de escenarios considerados
 
 Las pruebas incluyen dos tipos de escenarios:
